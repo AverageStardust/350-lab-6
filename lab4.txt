@@ -1,1 +1,10 @@
 Answer written questions here:
+
+1.
+If the inital iteration was too high it would be very hard to move around since the frame rate would be so low. This low inital value allows the user to move the camera before letting the code render more detail.
+
+2.
+Sections of the image could be assigned to different cores to render independently before the results are joined back together. This could even be done on the GPU with a fragment shader, which would render each pixel in isolation from the others.
+
+3.
+Doing multisample anti-aliasing would smooth the image somewhat, and incresses the render time by ~4 times (in the case of 4-sample).

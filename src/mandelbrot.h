@@ -6,6 +6,8 @@
 
 #include <SFML/Graphics.hpp>
 
+#include "cyclic_gradient.h"
+
 // (way more precision than a double can actually store...)
 constexpr double LOG_2 = 0.6931471805599453094172321214581765680755001;
 
@@ -16,7 +18,7 @@ class MandelbrotViewer {
     constexpr static int MAX_ITERS_UPPER_BOUND = 3200;  // cap maxIters at this (inclusive).
     constexpr static int ITERS_MULTIPLIER =
         2;  // multiply last frame's maxIters by this, if our view did NOT change last frame.
-    constexpr static double ZOOM_EXPONENT_BASE = 1.01;
+    constexpr static double ZOOM_EXPONENT_BASE = 1.02;
 
 public:
     MandelbrotViewer(unsigned int windowWidth, unsigned int windowHeight);
